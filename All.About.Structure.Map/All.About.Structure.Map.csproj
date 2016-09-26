@@ -55,11 +55,17 @@
   <ItemGroup>
     <Compile Include="ChainOfResponsibility\QuoteProviders.cs" />
     <Compile Include="ChainOfResponsibility\ChainOfResponsibilityTests.cs" />
+    <Compile Include="FeatureToggle\Condition.cs" />
+    <Compile Include="FeatureToggle\FeatureToggleBasedOnAppConfig.cs" />
+    <Compile Include="FeatureToggle\FeatureToggleBasedOnOtherService.cs" />
+    <Compile Include="FeatureToggle\FeatureToggleBasedOnAppConfigNamed.cs" />
+    <Compile Include="FeatureToggle\Service.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PropertyInjection\CompositeService.cs" />
     <Compile Include="PropertyInjection\PropertyInjectionTests.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
