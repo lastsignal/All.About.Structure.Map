@@ -34,7 +34,7 @@ namespace All.About.Structure.Map.FeatureToggle
         }
 
         [Test]
-        public void ListRegistrations()
+        public void List_all_registrations()
         {
             Console.WriteLine(_container.WhatDoIHave());
         }

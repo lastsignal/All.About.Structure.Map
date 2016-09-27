@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Configuration;
 using System.Linq;
 using NUnit.Framework;
 using Should;
@@ -35,13 +34,13 @@ namespace All.About.Structure.Map.FeatureToggle
         }
 
         [Test]
-        public void ListRegistrations()
+        public void List_all_registrations()
         {
             Console.WriteLine(_container.WhatDoIHave());
         }
 
         [Test]
-        public void ServiceShouldResolveToService2()
+        public void Service_should_resolve_to_service2()
         {
             var type = _container.GetInstance<IService>();
             
@@ -49,7 +48,7 @@ namespace All.About.Structure.Map.FeatureToggle
         }
 
         [Test]
-        public void ShouldHaveAllInstancesRegistered()
+        public void Should_have_all_instances_registered()
         {
             // two named + one default. 
             _container.GetAllInstances<IService>().Count().ShouldEqual(3);
