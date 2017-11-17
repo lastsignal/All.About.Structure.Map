@@ -68,6 +68,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PropertyInjection\CompositeService.cs" />
     <Compile Include="PropertyInjection\PropertyInjectionTests.cs" />
+    <Compile Include="RuntimeConfiguration\RuntimeConfigurationTests.cs" />
+    <Compile Include="RuntimeConfiguration\Services.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
