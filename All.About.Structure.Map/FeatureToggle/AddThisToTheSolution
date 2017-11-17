@@ -1,0 +1,10 @@
+/*
+                { // FeatureToggle base registration for IProductStackComposer
+                    i.For<IProductStackComposer>().Add<ProductStackComposer>().Named(typeof (ProductStackComposer).Name);
+                    i.For<IProductStackComposer>().Add<ProductStackDataModelComposer>().Named(typeof (ProductStackDataModelComposer).Name);
+                    i.For<IProductStackComposer>().Use(c =>
+                        c.GetInstance<IFeatureEvaluator>().IsEnabled(Feature.EnableShadesActivation)
+                            ? c.GetInstance<IProductStackComposer>(typeof (ProductStackComposer).Name)
+                            : c.GetInstance<IProductStackComposer>(typeof (ProductStackDataModelComposer).Name));
+                }
+*/
