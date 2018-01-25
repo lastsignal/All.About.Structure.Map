@@ -22,9 +22,9 @@ namespace All.About.Structure.Map.RuntimeConfiguration
                 _.For<IService>().Use<Service1>();
             });
 
-            var allInstances = container.GetAllInstances<IService>();
+            var allInstances = container.GetAllInstances<IService>().ToList();
             allInstances.ShouldNotBeNull();
-            allInstances.Count().ShouldEqual(1);
+            allInstances.Count.ShouldEqual(1);
             allInstances.First().ShouldBeType(typeof(Service1));
 
             container.GetInstance<IService>().ShouldBeType(typeof(Service1));
@@ -33,9 +33,9 @@ namespace All.About.Structure.Map.RuntimeConfiguration
                 _.For<IService>().Use<Service2>()   // THIS WILL ADD A NEW INSTANCE
             );
 
-            allInstances = container.GetAllInstances<IService>();
+            allInstances = container.GetAllInstances<IService>().ToList();
             allInstances.ShouldNotBeNull();
-            allInstances.Count().ShouldEqual(2);
+            allInstances.Count.ShouldEqual(2);
 
             container.GetInstance<IService>().ShouldBeType(typeof(Service2));
 
@@ -50,18 +50,18 @@ namespace All.About.Structure.Map.RuntimeConfiguration
                 _.For<IService>().Use<Service1>();
             });
 
-            var allInstances = container.GetAllInstances<IService>();
+            var allInstances = container.GetAllInstances<IService>().ToList();
             allInstances.ShouldNotBeNull();
-            allInstances.Count().ShouldEqual(1);
+            allInstances.Count.ShouldEqual(1);
             allInstances.First().ShouldBeType(typeof(Service1));
 
             container.GetInstance<IService>().ShouldBeType(typeof(Service1));
 
             container.Inject<IService>(new Service2());  // THIS WILL STILL ADD A NEW INSTANCE AND DOESN'T REPLACE
 
-            allInstances = container.GetAllInstances<IService>();
+            allInstances = container.GetAllInstances<IService>().ToList();
             allInstances.ShouldNotBeNull();
-            allInstances.Count().ShouldEqual(2);
+            allInstances.Count.ShouldEqual(2);
 
             container.GetInstance<IService>().ShouldBeType(typeof(Service2));
         }
@@ -74,9 +74,9 @@ namespace All.About.Structure.Map.RuntimeConfiguration
                 _.For<IService>().Use<Service1>();
             });
 
-            var allInstances = container.GetAllInstances<IService>();
+            var allInstances = container.GetAllInstances<IService>().ToList();
             allInstances.ShouldNotBeNull();
-            allInstances.Count().ShouldEqual(1);
+            allInstances.Count.ShouldEqual(1);
             allInstances.First().ShouldBeType(typeof(Service1));
 
             container.GetInstance<IService>().ShouldBeType(typeof(Service1));
@@ -86,9 +86,9 @@ namespace All.About.Structure.Map.RuntimeConfiguration
                 _.For<IService>().Use<Service2>()   // THIS WILL ADD A BRAND NEW INSTANCE TO THE EMPTY LIST
             );
 
-            allInstances = container.GetAllInstances<IService>();
+            allInstances = container.GetAllInstances<IService>().ToList();
             allInstances.ShouldNotBeNull();
-            allInstances.Count().ShouldEqual(1);
+            allInstances.Count.ShouldEqual(1);
 
             container.GetInstance<IService>().ShouldBeType(typeof(Service2));
 
