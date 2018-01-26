@@ -57,6 +57,14 @@
     <Compile Include="ArrayRegistration\Service.cs" />
     <Compile Include="ChainOfResponsibility\QuoteProviders.cs" />
     <Compile Include="ChainOfResponsibility\ChainOfResponsibilityTests.cs" />
+    <Compile Include="ConditionalDependency\GenericProperty\ConditionalDependencyTests.cs" />
+    <Compile Include="ConditionalDependency\GenericProperty\Services.cs" />
+    <Compile Include="ConditionalDependency\SimpleConstructor\ConditionalDependencyTests.cs" />
+    <Compile Include="ConditionalDependency\SimpleConstructor\Services.cs" />
+    <Compile Include="ConditionalDependency\SimpleProperty\ConditionalDependencyTests.cs" />
+    <Compile Include="ConditionalDependency\SimpleProperty\Services.cs" />
+    <Compile Include="ConditionalDependency\GenericConstructor\ConditionalDependencyTests.cs" />
+    <Compile Include="ConditionalDependency\GenericConstructor\Services.cs" />
     <Compile Include="FeatureToggle\Condition.cs" />
     <Compile Include="FeatureToggle\FeatureToggleBasedOnAppConfig.cs" />
     <Compile Include="FeatureToggle\FeatureToggleBasedOnOtherService.cs" />
